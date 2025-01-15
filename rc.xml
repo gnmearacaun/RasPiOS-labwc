@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_config xmlns="http://openbox.org/3.4/rc">
+
+  <!-- virtual desktops - hide workspace switcher -->
+  <desktops number="3">
+    <popupTime>0</popupTime>
+  </desktops>
+
+  <!-- Show windows regardless of what workspace they are on -->
+  <windowSwitcher>
+    <allWorkspaces>no</allWorkspaces>
+  </windowSwitcher>
+
+  <!-- window placement on opening, cascade, automatic or center -->
+  <placement>
+    <policy>automatic</policy>
+  </placement>
+
+  <keyboard>
+    <keybind key="W-r">
+      <action name="Execute" command="wfpanelctl smenu menu"/>
+    </keybind>
+    <!-- Close any application -->
+    <keybind key="W-q">
+      <action name="Close"/>
+    </keybind>
+    <!-- Terminals galore -->
+    <keybind key="W-Return">
+      <action name="Execute" command="alacritty"/>
+    </keybind>
+    <keybind key="W-t">
+      <action name="Execute" command="lxterminal"/>
+    </keybind>
+    <keybind key="W-u">
+      <action name="Execute" command="foot"/>
+    </keybind>
+    <keybind key="W-i">
+      <action name="Execute" command="env LIBGL_ALWAYS_SOFTWARE=1 kitty"/>
+    </keybind>
+    <keybind key="W-o">
+      <action name="Execute" command="qterminal"/>
+    </keybind>
+    <!-- For dropdown terminal experimental -->
+    <keybind key="W-d">
+      <action name="Execute" command="yakuake"/>
+    </keybind>
+    <keybind key="W-8">
+      <action name="Execute" command="guake"/>
+    </keybind>
+    <keybind key="W-">
+      <action name="Execute" command="qterminal -d"/>
+    </keybind>
+    <!-- Screenshots -->
+    <!-- Grimshot will write image files to XDG_SCREENSHOTS_DIR if this is set (or defined in ~/.config/user-dirs.dir), or otherwise fall back to XDG_PICTURES_DIR. -->
+    <keybind key="W-y">
+      <action name="Execute" command="/usr/bin/grimshot save screen"/>
+    </keybind>
+    <keybind key="W-C-y">
+      <action name="Execute" command="/usr/bin/grimshot save area"/>
+    </keybind>
+    <keybind key="W-S-y">
+      <action name="Execute" command="/usr/bin/grimshot --wait 10 save screen"/>
+    </keybind>
+    <!-- Windows -->
+    <keybind key="W-a">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <keybind key="F11">
+      <action name="ToggleFullscreen"/>
+    </keybind>
+    <keybind key="W-m">
+      <action name="ToggleMagnify"/>
+    </keybind>
+    <keybind key="W-x">
+      <action name="ToggleDecorations"/>
+    </keybind>
+    <keybind key="W-S-i">
+      <action name="Iconify"/>
+    </keybind>
+    <!-- Media Player -->
+    <keybind key="W-n">
+      <action name="Execute" command="playerctl next"/>
+    </keybind>
+    <keybind key="W-p">
+      <action name="Execute" command="playerctl previous"/>
+    </keybind>
+    <keybind key="W-,">
+      <action name="Execute" command="playerctl -p audacious play-pause"/>
+    </keybind>
+    <keybind key="W-f">
+      <action name="Execute" command="playerctl position 25+"/>
+    </keybind>
+    <keybind key="W-b">
+      <action name="Execute" command="playerctl position 25-"/>
+    </keybind>
+    <!-- Workspace navigation -->
+    <keybind key="W-s">
+      <action name="NextWindow"/>
+    </keybind>
+    <keybind key="W-Tab">
+      <action name="NextWindow"/>
+    </keybind>
+    <keybind key="W-;">
+      <action name="NextWindow"/>
+    </keybind>
+    <!-- GoToDesktop left and right with z,h,j and g,k,l respectively -->
+    <keybind key="W-h">
+      <action name="GoToDesktop" to="left"/>
+    </keybind>
+    <keybind key="W-j">
+      <action name="GoToDesktop" to="left"/>
+    </keybind>
+    <keybind key="W-k">
+      <action name="GoToDesktop" to="right"/>
+    </keybind>
+    <keybind key="W-l">
+      <action name="GoToDesktop" to="right"/>
+    </keybind>
+    <keybind key="W-z">
+      <action name="GoToDesktop" to="left"/>
+    </keybind>
+    <keybind key="W-g">
+      <action name="GoToDesktop" to="right"/>
+    </keybind>
+    <!-- GoToDesktop by number -->
+    <keybind key="W-1">
+      <action name="GoToDesktop" to="1"/>
+    </keybind>
+    <keybind key="W-2">
+      <action name="GoToDesktop" to="2"/>
+    </keybind>
+    <keybind key="W-3">
+      <action name="GoToDesktop" to="3"/>
+    </keybind>
+    <keybind key="W-4">
+      <action name="GoToDesktop" to="4"/>
+    </keybind>
+    <keybind key="C-W-h">
+      <action name="SnapToEdge" direction="left"/>
+    </keybind>
+    <keybind key="C-W-j">
+      <action name="SnapToEdge" direction="down"/>
+    </keybind>
+    <keybind key="C-W-k">
+      <action name="SnapToEdge" direction="up"/>
+    </keybind>
+    <keybind key="C-W-l">
+      <action name="SnapToEdge" direction="right"/>
+    </keybind>
+    <!-- SendToDesktop -->
+    <keybind key="S-W-h">
+      <action name="SendToDesktop" to="left"/>
+    </keybind>
+    <keybind key="S-W-r">
+      <action name="SendToDesktop" to="right"/>
+    </keybind>
+    <keybind key="S-W-h">
+      <action name="SendToDesktop" to="left"/>
+    </keybind>
+    <keybind key="S-W-1">
+      <action name="SendToDesktop" to="1"/>
+    </keybind>
+    <keybind key="S-W-2">
+      <action name="SendToDesktop" to="2"/>
+    </keybind>
+    <keybind key="S-W-3">
+      <action name="SendToDesktop" to="3"/>
+    </keybind>
+    <keybind key="S-W-4">
+      <action name="SendToDesktop" to="4"/>
+    </keybind>
+    <!-- Reload config -->
+    <keybind key="W-S-c">
+      <action name="Reconfigure"/>
+    </keybind>
+    <!-- Volume -->
+    <keybind key="XF86AudioMute">
+      <action name="Execute" command="wfpanelctl volumepulse mute"/>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute" command="wfpanelctl volumepulse vold"/>
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute" command="wfpanelctl volumepulse volu"/>
+    </keybind>
+    <keybind key="W--">
+      <action name="Execute" command="wfpanelctl volumepulse vold"/>
+    </keybind>
+    <keybind key="W-=">
+      <action name="Execute" command="wfpanelctl volumepulse volu"/>
+    </keybind>
+    <keybind key="W-F2">
+      <action name="Execute" command="wfpanelctl volumepulse vold"/>
+    </keybind>
+    <keybind key="W-F3">
+      <action name="Execute" command="wfpanelctl volumepulse volu"/>
+    </keybind>
+    <keybind key="xf86_monbrightnessup">
+      <action name="execute" command="brightnessctl set +1%"/>
+    </keybind>
+    <keybind key="xf86_monbrightnessdown">
+      <action name="execute" command="brightnessctl set 1%-"/>
+    </keybind>
+    <keybind key="W-F6">
+      <action name="execute" command="brightnessctl set +1%"/>
+    </keybind>
+    <keybind key="W-F5">
+      <action name="execute" command="brightnessctl set 1%-"/>
+    </keybind>
+    <!-- Misc Pi -->
+    <keybind key="C-W-n">
+      <action name="Execute" command="wfpanelctl smenu menu"/>
+    </keybind>
+    <keybind key="C-W-b">
+      <action name="Execute" command="wfpanelctl bluetooth menu"/>
+    </keybind>
+    <keybind key="Super_L" onRelease="yes">
+      <action name="Execute" command="wfpanelctl smenu menu"/>
+    </keybind>
+    <keybind key="C-A-Delete">
+      <action name="Execute" command="lxde-pi-shutdown-helper"/>
+    </keybind>
+    <keybind key="XF86PowerOff" onRelease="yes">
+      <action name="Execute">
+        <command>pwrkey</command>
+      </action>
+    </keybind>
+    <numlock>off</numlock>
+    <default/>
+    <keybind key="A-Left"/>
+    <keybind key="A-Right"/>
+    <keybind key="A-Up"/>
+    <keybind key="A-Down"/>
+  </keyboard>
+
+  <theme>
+    <name>PiXnoir_l</name>
+    <cornerRadius>0</cornerRadius>
+    <keepBorder>yes</keepBorder>
+    <font place="ActiveWindow">
+      <name>FiraCode Nerd Font</name>
+      <size>17</size>
+      <weight>Normal</weight>
+      <slant>Normal</slant>
+    </font>
+    <font place="InactiveWindow">
+      <name>FiraCode Nerd Font</name>
+      <size>17</size>
+      <weight>Normal</weight>
+      <slant>Normal</slant>
+    </font>
+    <font place="OnScreenDisplay">
+      <name>FiraCode Nerd Font</name>
+      <size>17</size>
+      <weight>Normal</weight>
+      <slant>Normal</slant>
+    </font>
+    <dropShadows>yes</dropShadows>
+  </theme>
+
+  <core>
+    <gap>5</gap>
+    <!-- <decoration>server</decoration> -->
+    <!-- <decoration>client</decoration> -->
+    <!-- <adaptiveSync>no</adaptiveSync> -->
+    <!-- <allowTearing>yes</allowTearing> -->
+    <!-- <reuseOutputMode>no</reuseOutputMode> -->
+  </core>
+
+  <!-- focus -->
+  <focus>
+    <followMouse>yes</followMouse>
+    <followMouseRequiresMovement>no</followMouseRequiresMovement>
+    <raiseOnFocus>no</raiseOnFocus>
+  </focus>
+
+  <mouse>
+    <default/>
+    <context name="Title">
+      <mousebind button="Right" action="Click">
+      </mousebind>
+    </context>
+    <context name="WindowMenu">
+      <mousebind button="Left" action="Click">
+      </mousebind>
+      <mousebind button="Right" action="Click">
+      </mousebind>
+    </context>
+    <context name="All">
+      <mousebind direction="W-Up" action="Scroll">
+        <action name="ZoomIn"/>
+      </mousebind>
+      <mousebind direction="W-Down" action="Scroll">
+        <action name="ZoomOut"/>
+      </mousebind>
+     </context>
+  <doubleClickTime>400</doubleClickTime></mouse>
+
+  <!-- window rules, experimental -->
+  <windowRules>
+    <windowRule identifier="swayimg" serverDecoration="yes"/>
+    <windowRule identifier="Kodi" serverDecoration="yes"/>
+  <!-- chromium -->
+      <windowRule identifier="chromium-browser" matchOnce="true">
+        <skipTaskbar>no</skipTaskbar>
+        <skipWindowSwitcher>no</skipWindowSwitcher>
+        <action name="ToggleOmnipresent"/>
+      </windowRule>
+  <!-- firefox pip -->
+      <windowRule identifier="firefox" title="Picture-in-Picture" matchOnce="false">
+        <skipTaskbar>no</skipTaskbar>
+        <skipWindowSwitcher>no</skipWindowSwitcher>
+        <action name="ToggleOmnipresent"/>
+      </windowRule>
+  <!-- mpv -->
+      <windowRule identifier="mpv" matchOnce="true">
+        <skipTaskbar>no</skipTaskbar>
+        <skipWindowSwitcher>no</skipWindowSwitcher>
+        <action name="ToggleOmnipresent"/>
+      </windowRule>
+  </windowRules>
+
+  <snapping>
+    <range>0</range>
+    <topMaximize>no</topMaximize>
+  </snapping>
+
+  <magnifier>
+    <width>-1</width>
+    <height>-1</height>
+    <initScale>2.0</initScale>
+    <increment>0.2</increment>
+    <useFilter>false</useFilter>
+  </magnifier>
+
+  <libinput>
+    <device category="default">
+      <leftHanded>no</leftHanded>
+      <naturalScroll>no</naturalScroll>
+      <pointerSpeed>1</pointerSpeed>
+      <accelProfile>adaptive</accelProfile>
+      <tap>yes</tap>
+      <tapButtonMap/>
+      <middleEmulation/>
+      <disableWhileTyping>yes</disableWhileTyping>
+      </device>
+  </libinput>
+
+  </openbox_config>
+<!-- 
+vim: ts=2 sts=2 sw=2 et
+-->

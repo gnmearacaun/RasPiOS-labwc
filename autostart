@@ -1,0 +1,10 @@
+# Screen off in 3 min, or set blanking in raspi-config
+swayidle -w timeout 180 'wlopm --off \*' resume 'wlopm --on \*' &
+# Faster startup for GTK apps:
+dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY > /dev/null 2>&1 &
+# Clipboard setting, experimental
+wl-paste --watch cliphist store &
+
+# `raindrop` can used to configure output directives such as mode, position, scale and transform.
+#  Run `raindrop &` right-click selected monitor for options  
+

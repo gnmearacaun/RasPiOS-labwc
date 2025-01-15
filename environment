@@ -1,0 +1,13 @@
+XKB_DEFAULT_MODEL=pc105
+XKB_DEFAULT_LAYOUT=ie
+XKB_DEFAULT_VARIANT=
+XKB_DEFAULT_OPTIONS=lv3:ralt_switch
+
+# QT_QPA_PLATFORMTHEME=qt6ct
+
+# Force firefox to use wayland backend
+# MOZ_ENABLE_WAYLAND=1
+
+# Scaling for gtk apps, experimental
+GDK_SCALE=1.2
+GDK_DPI_SCALE=1.2
