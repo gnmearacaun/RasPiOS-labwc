@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc">
-
+  <!-- source: https://github.com/gnmearacaun/RasPiOS-labwc -->
+ 
   <!-- virtual desktops + workspace switcher (0 popupTime to hide) -->
   <desktops number="3">
     <popupTime>1</popupTime>
