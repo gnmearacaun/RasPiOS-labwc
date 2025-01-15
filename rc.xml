@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc">
 
-  <!-- virtual desktops - hide workspace switcher -->
+  <!-- virtual desktops + workspace switcher -->
   <desktops number="3">
-    <popupTime>0</popupTime>
+    <popupTime>1</popupTime>
   </desktops>
 
   <!-- Show windows regardless of what workspace they are on -->
